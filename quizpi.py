@@ -31,10 +31,11 @@ sound_click = "./Sounds/click.mp3"
 f_INTRO = 0
 f_MENU = 1
 f_REGISTRATION = 2
-f_QUESTIONS = 3
-f_RESULTS = 4
-f_HIGHSCORES = 5
-f_ABOUT = 6
+f_CATEGORY = 3
+f_QUESTIONS = 4
+f_RESULTS = 5
+f_HIGHSCORES = 6
+f_ABOUT = 7
 
 currentPhase = f_INTRO
 
@@ -547,8 +548,15 @@ while (playing == True):
 				#pygame.mixer.music.load(sound_click)
 				#pygame.mixer.music.play(0)
 			if (btnPressed == btnBlue):			# El usuario pulsa el BOTON BLUE continuamos
-				currentPhase = f_QUESTIONS
+				currentPhase = f_CATEGORY
 				looping = False
+
+	if (playing and (currentPhase == f_CATEGORY)):
+			imagen = pygame.image.load("./Images/quiz_pantalla_231_RESPUESTASLARGAS_ingles.png").convert()
+			pantalla.blit(imagen, posicion_base)
+			pygame.display.flip()
+			pygame.time.delay(2000)
+			currentPhase = f_QUESTIONS
 
 	# -------- Bucle de PREGUNTAS -----------
 	if (playing and (currentPhase == f_QUESTIONS)):
@@ -565,7 +573,12 @@ while (playing == True):
 		#Cargo desde URL
 		#url = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
 		#url = 'https://opentdb.com/api.php?amount=10&type=multiple'
-		url = 'https://opentdb.com/api.php?amount=10&category=18&type=multiple'
+		urlComputer = 'https://opentdb.com/api.php?amount=10&category=18&type=multiple'
+		urlSports = 'https://opentdb.com/api.php?amount=10&category=21&type=multiple'
+		urlMath = 'https://opentdb.com/api.php?amount=10&category=19&type=multiple'
+		urlVideoGames = 'https://opentdb.com/api.php?amount=10&category=15&type=multiple'
+		url = urlVideoGames
+		
 		req = urllib.request.Request(url)
 		r = urllib.request.urlopen(req).read()
 		data = json.loads(r.decode('utf-8-sig'))
