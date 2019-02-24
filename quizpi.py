@@ -20,12 +20,12 @@ time_stamp_btn = time.time()
 btnPressed = -1
 strPlayerName = ''
 
-sound_intro = "./intro.mp3"
-sound_applause = "./applause.mp3" 
-sound_error = "./buzzer.mp3"
-sound_drumroll = "./drumroll.mp3"
-sound_tada = "./tada.mp3"
-sound_click = "./click.mp3"
+sound_intro = "./Sounds/intro.mp3"
+sound_applause = "./Sounds/applause.mp3" 
+sound_error = "./Sounds/buzzer.mp3"
+sound_drumroll = "./Sounds/drumroll.mp3"
+sound_tada = "./Sounds/tada.mp3"
+sound_click = "./Sounds/click.mp3"
 
 #Game Phases
 f_INTRO = 0
