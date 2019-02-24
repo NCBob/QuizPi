@@ -556,20 +556,28 @@ while (playing == True):
 			pantalla.blit(imagen, posicion_base)
 			pygame.display.flip()
 			btnPressed = -1
+			looping = True
 			urlComputer = 'https://opentdb.com/api.php?amount=10&category=18&type=multiple'
 			urlSports = 'https://opentdb.com/api.php?amount=10&category=21&type=multiple'
 			urlMath = 'https://opentdb.com/api.php?amount=10&category=19&type=multiple'
 			urlVideoGames = 'https://opentdb.com/api.php?amount=10&category=15&type=multiple'
-			while (btnPressed == -1)
-				if (btnPressed = btnRed)
+			while (looping):
+				if (btnPressed == btnRed):
 					url = urlComputer
-				if (btnPressed == btnYellow)
+					currentPhase = f_QUESTIONS
+					looping = False
+				if (btnPressed == btnYellow):
 					url = urlSports
-				if (btnPressed == btnGreen)
+					currentPhase = f_QUESTIONS
+					looping = False
+				if (btnPressed == btnGreen):
 					url = urlMath
-				if (btnPressed == btnBlue)
+					currentPhase = f_QUESTIONS
+					looping = False
+				if (btnPressed == btnBlue):
 					url = urlVideoGames
-			currentPhase = f_QUESTIONS
+					currentPhase = f_QUESTIONS
+					looping = False
 
 	# -------- Bucle de PREGUNTAS -----------
 	if (playing and (currentPhase == f_QUESTIONS)):
