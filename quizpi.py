@@ -804,7 +804,7 @@ while (playing == True):
 				
 		pygame.mixer.music.load(sound_drumroll)
 		soundPlay = pygame.mixer.music.play(0)
-		while soundPlay.get_busy()
+		while soundPlay.get_busy():
 			pygame.time.delay(100)
 		pygame.mixer.music.load(sound_tada)
 		pygame.mixer.music.play(0)
