@@ -314,7 +314,7 @@ while (playing == True):
 		pantalla.fill(cWHITE)
  
 		# Muestra la pantalla inicial en pantalla:
-		imagen = pygame.image.load("./quiz_pantalla_1_MENU_ingles.png").convert()
+		imagen = pygame.image.load("./Images/quiz_pantalla_1_MENU_ingles.png").convert()
 		pantalla.blit(imagen, posicion_base)
 
 		# Limitamos a 60 fotogramas por segundo.
@@ -380,7 +380,7 @@ while (playing == True):
 		pantalla.fill(cWHITE)
  
 		# Muestra la pantalla inicial en pantalla:
-		imagen = pygame.image.load("./quiz_pantalla_5_MEJORES_ingles.png").convert()
+		imagen = pygame.image.load("./Images/quiz_pantalla_5_MEJORES_ingles.png").convert()
 		pantalla.blit(imagen, posicion_base)
 
 		# Recuperamos el fichero de mejores
@@ -434,7 +434,7 @@ while (playing == True):
 		pantalla.fill(cWHITE)
  
 		# Muestra la pantalla inicial en pantalla:
-		imagen = pygame.image.load("./quiz_pantalla_21_NOMBRE_ingles.png").convert()
+		imagen = pygame.image.load("./Images/quiz_pantalla_21_NOMBRE_ingles.png").convert()
 		pantalla.blit(imagen, posicion_base)
 
 		fuente = pygame.font.SysFont('arial', 64)
@@ -498,7 +498,7 @@ while (playing == True):
 				# Limpia la pantalla y establece su color de fondo
 				pantalla.fill(cWHITE)
  				# Muestra la pantalla inicial en pantalla:
-				imagen = pygame.image.load("./quiz_pantalla_21_NOMBRE_ingles.png").convert()
+				imagen = pygame.image.load("./Images/quiz_pantalla_21_NOMBRE_ingles.png").convert()
 				pantalla.blit(imagen, posicion_base)
 				fuente = pygame.font.SysFont('arial', 24)
 				mensaje = fuente.render(strPlayerName, 1, cBLUE)
@@ -517,7 +517,7 @@ while (playing == True):
 				# Limpia la pantalla y establece su color de fondo
 				pantalla.fill(cWHITE)
  				# Muestra la pantalla inicial en pantalla:
-				imagen = pygame.image.load("./quiz_pantalla_21_NOMBRE_ingles.png").convert()
+				imagen = pygame.image.load("./Images/quiz_pantalla_21_NOMBRE_ingles.png").convert()
 				pantalla.blit(imagen, posicion_base)
 				fuente = pygame.font.SysFont('arial', 24)
 				mensaje = fuente.render(strPlayerName, 1, cBLUE)
@@ -535,7 +535,7 @@ while (playing == True):
 					iLetra = 0
 				# Limpia la pantalla y establece su color de fondo
 				pantalla.fill(cWHITE)
-				imagen = pygame.image.load("./quiz_pantalla_21_NOMBRE_ingles.png").convert()
+				imagen = pygame.image.load("./Images/quiz_pantalla_21_NOMBRE_ingles.png").convert()
 				pantalla.blit(imagen, posicion_base)
 				fuente = pygame.font.SysFont('arial', 24)
 				mensaje = fuente.render(strPlayerName, 1, cBLUE)
@@ -576,7 +576,7 @@ while (playing == True):
 			# Limpia la pantalla y establece su color de fondo
 			pantalla.fill(cWHITE)
 			# Muestra la pantalla de fondo de la pregunta:
-			imagen = pygame.image.load("./quiz_pantalla_231_RESPUESTASLARGAS_ingles.png").convert()
+			imagen = pygame.image.load("./Images/quiz_pantalla_231_RESPUESTASLARGAS_ingles.png").convert()
 			pantalla.blit(imagen, posicion_base)
 			
 			# Escribe la pregunta
@@ -621,13 +621,13 @@ while (playing == True):
 				if (i == randomnumber):
 					txtRespuesta = data['results'][nRespuesta]['correct_answer'].replace('"','\\"').replace("'","\\'").replace('&shy;','').replace('&quot;','"').replace('&#039;',"'")
 					# Escribe la respuesta
-					fuente = pygame.font.SysFont('./Antonio-Bold.ttf', 28)
+					fuente = pygame.font.SysFont('./Fonts/Antonio-Bold.ttf', 28)
 					mensaje = fuente.render(txtRespuesta, 1, cBLUE)
 					pantalla.blit(mensaje, (142, 129+i*50))
 				else:
 					txtRespuesta = data['results'][nRespuesta]['incorrect_answers'][nr].replace('"','\\"').replace("'","\\'").replace('&shy;','').replace('&quot;','"').replace('&#039;',"'")
 					# Escribe la respuesta
-					fuente = pygame.font.SysFont('./Antonio-Bold.ttf', 28)
+					fuente = pygame.font.SysFont('./Fonts/Antonio-Bold.ttf', 28)
 					mensaje = fuente.render(txtRespuesta, 1, cBLUE)
 					pantalla.blit(mensaje, (142, 129+i*50))
 					nr = nr + 1
@@ -669,7 +669,7 @@ while (playing == True):
 				tiempo = instanteFinal - instanteInicial
 				segundos = tiempo.seconds
 				pygame.draw.rect(pantalla,cWHITE,(280,0,479,50))
-				fuente = pygame.font.Font('./Antonio-Regular.ttf', 18)
+				fuente = pygame.font.Font('./Fonts/Antonio-Regular.ttf', 18)
 				txtPregunta = 'Tiempo: ' + str(segundos) + ' segundos'
 				mensaje = fuente.render(txtPregunta, 1, cBLACK)
 				pantalla.blit(mensaje, (380-mensaje.get_rect().width/2, 20))
@@ -751,7 +751,7 @@ while (playing == True):
 		mensaje = fuente.render(txtResultados, 1, cBLUE)
 		pantalla.blit(mensaje, (240-mensaje.get_rect().width/2, 70))
 		
-		fuente = pygame.font.Font('./Antonio-Bold.ttf', 36)
+		fuente = pygame.font.Font('./Fonts/Antonio-Bold.ttf', 36)
 		if (score >=10):
 			txtResultados = '¡ PERFECT !'
 		elif (score >=7):
@@ -767,7 +767,7 @@ while (playing == True):
 		mensaje = fuente.render(txtResultados, 1, cBLUE)
 		pantalla.blit(mensaje, (240-mensaje.get_rect().width/2, 115))
 		
-		fuente = pygame.font.Font('./Antonio-Bold.ttf', 24)
+		fuente = pygame.font.Font('./Fonts/Antonio-Bold.ttf', 24)
 		txtResultados = 'You have succesfully answered ' + str(score) + ' of ' + str(NResponse) + ' questions'
 		mensaje = fuente.render(txtResultados, 1, cBLUE)
 		pantalla.blit(mensaje, (240-mensaje.get_rect().width/2, 185))
