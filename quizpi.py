@@ -803,7 +803,9 @@ while (playing == True):
 		pygame.display.flip()
 				
 		pygame.mixer.music.load(sound_drumroll)
-		pygame.mixer.music.play(0)
+		soundPlay = pygame.mixer.music.play(0)
+		while soundPlay.get_busy()
+			pygame.time.delay(100)
 		pygame.mixer.music.load(sound_tada)
 		pygame.mixer.music.play(0)
 	
@@ -819,4 +821,4 @@ while (playing == True):
 # Pórtate bien con el IDLE. Si nos olvidamos de esta línea, el programa se 'colgará'
 # en la salida.
 pygame.quit()
-os.system("sudo shutdown -h now")
+#os.system("sudo shutdown -h now")
