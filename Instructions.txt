@@ -1,0 +1,9 @@
+1) Create a folder in your Raspberry:
+	
+	/home/pi/QuizzPi
+
+2) Copy all the files into this folder
+
+3) Run it:
+
+	# sudo python3 /home/pi/QuizzPi.py
