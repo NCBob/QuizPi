@@ -447,8 +447,8 @@ while (playing == True):
 		# Avancemos y actualicemos la pantalla con lo que hemos dibujado.
 		pygame.display.flip()
 
-		pygame.mixer.music.load(sound_click)
-		pygame.mixer.music.play(0)
+		#pygame.mixer.music.load(sound_click)
+		#pygame.mixer.music.play(0)
 	
 		# Esperamos pulsacion de boton
 		btnPressed = -1
@@ -526,8 +526,8 @@ while (playing == True):
 				mensaje = fuente.render(aLetras[iLetra], 1, cBLUE)
 				pantalla.blit(mensaje, (240-mensaje.get_rect().width/2, 130))
 				pygame.display.flip()
-				pygame.mixer.music.load(sound_click)
-				pygame.mixer.music.play(0)
+				#pygame.mixer.music.load(sound_click)
+				#pygame.mixer.music.play(0)
 			if (btnPressed == btnGreen):		# El usuario pulsa el BOTON GREEN pasamos a siguiente letra
 				btnPressed = -1
 				iLetra = iLetra + 1
@@ -544,8 +544,8 @@ while (playing == True):
 				mensaje = fuente.render(aLetras[iLetra], 1, cBLUE)
 				pantalla.blit(mensaje, (240-mensaje.get_rect().width/2, 130))
 				pygame.display.flip()
-				pygame.mixer.music.load(sound_click)
-				pygame.mixer.music.play(0)
+				#pygame.mixer.music.load(sound_click)
+				#pygame.mixer.music.play(0)
 			if (btnPressed == btnBlue):			# El usuario pulsa el BOTON BLUE continuamos
 				currentPhase = f_QUESTIONS
 				looping = False
