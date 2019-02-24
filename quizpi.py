@@ -571,11 +571,11 @@ while (playing == True):
 					currentPhase = f_QUESTIONS
 					looping = False
 				if (btnPressed == btnGreen):
-					url = urlMath
+					url = urlVideoGames
 					currentPhase = f_QUESTIONS
 					looping = False
 				if (btnPressed == btnBlue):
-					url = urlVideoGames
+					url = urlMath
 					currentPhase = f_QUESTIONS
 					looping = False
 
