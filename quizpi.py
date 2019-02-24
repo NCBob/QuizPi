@@ -778,8 +778,8 @@ while (playing == True):
 		# Añadimos a los mejores y nos quedamos con los 10 primeros
 		# Recuperamos el fichero de mejores
 		high_scores = {}
-		if (os.path.exists('./losmejores.txt')) and (os.path.getsize('./losmejores.txt')>0):
-			high_scores = json.load(open('./losmejores.txt'))
+		if (os.path.exists('./highscores.txt')) and (os.path.getsize('./highscores.txt')>0):
+			high_scores = json.load(open('./highscores.txt'))
 		else:
 			high_scores = {}
 
@@ -793,7 +793,7 @@ while (playing == True):
 		nuevo_high_scores = {}
 		nuevo_high_scores["lista"] = array_scores
 
-		with open('./losmejores.txt', 'w') as outfile:
+		with open('./highscores.txt', 'w') as outfile:
 			json.dump(nuevo_high_scores, outfile)		
 		
 		# Limitamos a 60 fotogramas por segundo.
