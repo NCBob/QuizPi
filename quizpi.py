@@ -563,8 +563,9 @@ while (playing == True):
 		#data = json.load(open('./test.json'))
 
 		#Cargo desde URL
-		url = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
+		#url = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
 		#url = 'https://opentdb.com/api.php?amount=10&type=multiple'
+		url = 'https://opentdb.com/api.php?amount=10&category=18&type=multiple'
 		req = urllib.request.Request(url)
 		r = urllib.request.urlopen(req).read()
 		data = json.loads(r.decode('utf-8-sig'))
