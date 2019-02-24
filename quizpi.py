@@ -385,8 +385,8 @@ while (playing == True):
 
 		# Recuperamos el fichero de mejores
 		high_scores = {}
-		if (os.path.exists('./losmejores.txt')) and (os.path.getsize('./losmejores.txt')>0):
-			high_scores = json.load(open('./losmejores.txt'))
+		if (os.path.exists('./highscores.txt')) and (os.path.getsize('./highscores.txt')>0):
+			high_scores = json.load(open('./highscores.txt'))
 		else:
 			high_scores = {}
 
