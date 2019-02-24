@@ -353,7 +353,7 @@ while (playing == True):
 		pantalla.fill(cWHITE)
  
 		# Muestra la pantalla inicial en pantalla:
-		imagen = pygame.image.load("./quiz_pantalla_4_INFORMACION_ingles.png").convert()
+		imagen = pygame.image.load("./Images/quiz_pantalla_4_INFORMACION_ingles.png").convert()
 		pantalla.blit(imagen, posicion_base)
 
 		# Limitamos a 60 fotogramas por segundo.
