@@ -552,7 +552,7 @@ while (playing == True):
 				looping = False
 
 	if (playing and (currentPhase == f_CATEGORY)):
-			imagen = pygame.image.load("./Images/quiz_pantalla_231_RESPUESTASLARGAS_ingles.png").convert()
+			imagen = pygame.image.load("./Images/Categories.png").convert()
 			pantalla.blit(imagen, posicion_base)
 			pygame.display.flip()
 			pygame.time.delay(2000)
@@ -578,7 +578,7 @@ while (playing == True):
 		urlMath = 'https://opentdb.com/api.php?amount=10&category=19&type=multiple'
 		urlVideoGames = 'https://opentdb.com/api.php?amount=10&category=15&type=multiple'
 		url = urlVideoGames
-		
+
 		req = urllib.request.Request(url)
 		r = urllib.request.urlopen(req).read()
 		data = json.loads(r.decode('utf-8-sig'))
