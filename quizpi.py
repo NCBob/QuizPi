@@ -555,7 +555,20 @@ while (playing == True):
 			imagen = pygame.image.load("./Images/Categories.png").convert()
 			pantalla.blit(imagen, posicion_base)
 			pygame.display.flip()
-			pygame.time.delay(2000)
+			btnPressed = -1
+			urlComputer = 'https://opentdb.com/api.php?amount=10&category=18&type=multiple'
+			urlSports = 'https://opentdb.com/api.php?amount=10&category=21&type=multiple'
+			urlMath = 'https://opentdb.com/api.php?amount=10&category=19&type=multiple'
+			urlVideoGames = 'https://opentdb.com/api.php?amount=10&category=15&type=multiple'
+			while (btnPressed == -1)
+				if (btnPressed = btnRed)
+					url = urlComputer
+				if (btnPressed == btnYellow)
+					url = urlSports
+				if (btnPressed == btnGreen)
+					url = urlMath
+				if (btnPressed == btnBlue)
+					url = urlVideoGames
 			currentPhase = f_QUESTIONS
 
 	# -------- Bucle de PREGUNTAS -----------
@@ -573,11 +586,6 @@ while (playing == True):
 		#Cargo desde URL
 		#url = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
 		#url = 'https://opentdb.com/api.php?amount=10&type=multiple'
-		urlComputer = 'https://opentdb.com/api.php?amount=10&category=18&type=multiple'
-		urlSports = 'https://opentdb.com/api.php?amount=10&category=21&type=multiple'
-		urlMath = 'https://opentdb.com/api.php?amount=10&category=19&type=multiple'
-		urlVideoGames = 'https://opentdb.com/api.php?amount=10&category=15&type=multiple'
-		url = urlVideoGames
 
 		req = urllib.request.Request(url)
 		r = urllib.request.urlopen(req).read()
