@@ -70,7 +70,7 @@ def btnPush(channel):
 	global time_stamp_btn
 	global btnPressed
 	time_now = time.time()
-	if (time_now - time_stamp_btn >= 0.3):
+	if (time_now - time_stamp_btn >= 0.1):
 			btnPressed = channel
 	time_stamp_btn = time_now
 
