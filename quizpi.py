@@ -23,9 +23,9 @@ strPlayerName = ''
 sound_intro = "./Sounds/intro.ogg"
 sound_applause = "./Sounds/applause.ogg" 
 sound_error = "./Sounds/buzzer.ogg"
-sound_drumroll = "./Sounds/drumroll.mp3"
-sound_tada = "./Sounds/tada.mp3"
-sound_click = "./Sounds/click.mp3"
+sound_drumroll = "./Sounds/drumroll.ogg"
+sound_tada = "./Sounds/tada.ogg"
+sound_click = "./Sounds/click.ogg"
 
 #Game Phases
 f_INTRO = 0
@@ -326,6 +326,7 @@ while (playing == True):
 		pygame.display.flip()
 
 		pygame.mixer.music.load(sound_click)
+		pygame.mixer.music.set_volume(1)
 		pygame.mixer.music.play(0)
 	
 		# Esperamos pulsacion de boton
@@ -365,6 +366,7 @@ while (playing == True):
 		pygame.display.flip()
 
 		pygame.mixer.music.load(sound_click)
+		pygame.mixer.music.set_volume(1)
 		pygame.mixer.music.play(0)
 	
 		# Esperamos pulsacion de boton
@@ -419,6 +421,7 @@ while (playing == True):
 		pygame.display.flip()
 
 		pygame.mixer.music.load(sound_applause)
+		pygame.mixer.music.set_volume(1)
 		pygame.mixer.music.play(0)
 	
 		# Esperamos pulsacion de boton
@@ -510,6 +513,7 @@ while (playing == True):
 				pantalla.blit(mensaje, (240-mensaje.get_rect().width/2, 130))
 				pygame.display.flip()
 				pygame.mixer.music.load(sound_click)
+				pygame.mixer.music.set_volume(1)
 				pygame.mixer.music.play(0)
 			if (btnPressed == btnYellow):		# El usuario pulsa el BOTON YELLOW pasamos a anterior letra
 				btnPressed = -1
@@ -671,6 +675,7 @@ while (playing == True):
 			pygame.display.flip()
 
 			pygame.mixer.music.load(sound_click)
+			pygame.mixer.music.set_volume(1)
 			pygame.mixer.music.play(0)
 	
 			# Esperamos pulsacion de boton
@@ -726,6 +731,7 @@ while (playing == True):
 				pygame.display.flip()
 				
 				pygame.mixer.music.load(sound_error)
+				pygame.mixer.music.set_volume(1)
 				pygame.mixer.music.play(0)
 	
 				# Esperamos 3 segundos
@@ -835,9 +841,11 @@ while (playing == True):
 		pygame.display.flip()
 				
 		pygame.mixer.music.load(sound_drumroll)
+		pygame.mixer.music.set_volume(1)
 		soundPlay = pygame.mixer.music.play(0)
 		pygame.time.delay(2500)
 		pygame.mixer.music.load(sound_tada)
+		pygame.mixer.music.set_volume(1)
 		pygame.mixer.music.play(0)
 	
 		# Esperamos pulsacion de boton
