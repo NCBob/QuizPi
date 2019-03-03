@@ -700,7 +700,7 @@ while (playing == True):
 				segundos = tiempo.seconds
 				pygame.draw.rect(pantalla,cWHITE,(280,0,479,50))
 				fuente = pygame.font.Font('./Fonts/Antonio-Regular.ttf', 18)
-				txtPregunta = 'Tiempo: ' + str(segundos) + ' segundos'
+				txtPregunta = 'Timer: ' + str(segundos) + ' seconds'
 				mensaje = fuente.render(txtPregunta, 1, cBLACK)
 				pantalla.blit(mensaje, (380-mensaje.get_rect().width/2, 20))
 
@@ -715,7 +715,7 @@ while (playing == True):
 				pantalla.fill(cWHITE)
 
 				# Muestra la pantalla de ERROR:
-				imagen = pygame.image.load("./Images/quiz_pantalla_26_ERROR_ingles.png").convert()
+				imagen = pygame.image.load("./Images/Wrong.png").convert()
 				pantalla.blit(imagen, posicion_base)
 
 				# Limitamos a 60 fotogramas por segundo.
@@ -734,7 +734,7 @@ while (playing == True):
 				pantalla.fill(cWHITE)
  
 				# Muestra la pantalla CORRECTO:
-				imagen = pygame.image.load("./Images/quiz_pantalla_25_CORRECTO_ingles.png").convert()
+				imagen = pygame.image.load("./Images/Correct.png").convert()
 
 				pantalla.blit(imagen, posicion_base)
 
@@ -783,17 +783,17 @@ while (playing == True):
 		
 		fuente = pygame.font.Font('./Fonts/Antonio-Bold.ttf', 36)
 		if (score >=10):
-			txtResultados = '¡ PERFECT !'
+			txtResultados = '* PERFECT *'
 		elif (score >=7):
-			txtResultados = '¡ VERY GOOD !'
+			txtResultados = '* VERY GOOD *'
 		elif (score >=5):
-			txtResultados = '¡ NOT BAD !'
+			txtResultados = '* NOT BAD *'
 		elif (score >=3):
-			txtResultados = '¡ BAD !'
+			txtResultados = '* BAD *'
 		elif (score < 3):
-			txtResultados = '¡ DISASTROUS !'
+			txtResultados = '* DISASTROUS *'
 		else:
-			txtResultados = '¡ ERROR !'
+			txtResultados = '* ERROR *'
 		mensaje = fuente.render(txtResultados, 1, cBLUE)
 		pantalla.blit(mensaje, (240-mensaje.get_rect().width/2, 115))
 		
