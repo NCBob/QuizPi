@@ -20,7 +20,7 @@ time_stamp_btn = time.time()
 btnPressed = -1
 strPlayerName = ''
 
-sound_intro = "./Sounds/intro.mp3"
+sound_intro = "./Sounds/intro.ogg"
 sound_applause = "./Sounds/applause.ogg" 
 sound_error = "./Sounds/buzzer.ogg"
 sound_drumroll = "./Sounds/drumroll.mp3"
@@ -294,6 +294,7 @@ while (playing == True):
 		pygame.display.flip()
 
 		pygame.mixer.music.load(sound_intro)
+		pygame.mixer.music.set_volume(1)
 		pygame.mixer.music.play(0)
 	
 		# Wait for button press
@@ -745,6 +746,7 @@ while (playing == True):
 				pygame.display.flip()
 				
 				pygame.mixer.music.load(sound_applause)
+				pygame.mixer.music.set_volume(1)
 				pygame.mixer.music.play(0)
 			
 				# Esperamos 3 segundos
