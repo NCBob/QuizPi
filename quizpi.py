@@ -698,7 +698,7 @@ while (playing == True):
 				instanteFinal = datetime.now()
 				tiempo = instanteFinal - instanteInicial
 				segundos = tiempo.seconds
-				pygame.draw.rect(pantalla,cWHITE,(280,0,479,35))
+				pygame.draw.rect(pantalla,cWHITE,(280,0,479,37))
 				fuente = pygame.font.Font('./Fonts/Antonio-Regular.ttf', 14)
 				txtPregunta = 'Timer: ' + str(segundos) + ' seconds'
 				mensaje = fuente.render(txtPregunta, 1, cBLACK)
