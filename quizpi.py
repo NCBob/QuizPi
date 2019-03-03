@@ -21,8 +21,8 @@ btnPressed = -1
 strPlayerName = ''
 
 sound_intro = "./Sounds/intro.mp3"
-sound_applause = "./Sounds/applause.mp3" 
-sound_error = "./Sounds/buzzer.mp3"
+sound_applause = "./Sounds/applause.wav" 
+sound_error = "./Sounds/buzzer.wav"
 sound_drumroll = "./Sounds/drumroll.mp3"
 sound_tada = "./Sounds/tada.mp3"
 sound_click = "./Sounds/click.mp3"
